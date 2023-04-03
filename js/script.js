@@ -83,6 +83,9 @@ window.onload = function () {
     changeSwVisual(0);
   }
 
+  // brandSlide
+  const swBrand = new Swiper(".swBrande");
+
   // Visual Swiper 스케일 효과
   // 참조 https://bkstudio.tistory.com/6
   // window 의 안쪽(웹브라우저 안쪽만) 높이
