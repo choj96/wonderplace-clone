@@ -1,4 +1,25 @@
 window.onload = function () {
+  // 위로 가기
+  const goTopBt = document.querySelector(".gotop");
+  goTopBt.addEventListener("click", function () {
+    // 구글검색 추천
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+  // 스크롤시에 부드럽게 goTop 보이고/숨기기
+  window.addEventListener("scroll", function () {
+    // 1. 스크롤바의 위치 값
+    const scY = window.scrollY;
+    // 2. 스크로바가 80픽셀 읻오시
+    if (scY > 80) {
+      goTopBt.classList.add("active");
+    } else {
+      goTopBt.classList.remove("active");
+    }
+  });
+
   // AOS 셋팅
   AOS.init();
 
